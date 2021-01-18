@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/xuanhung/.config/nvim/configs'
+let g:netrw_dirhist_3='/home/xuanhung/Dev/Struct-React-Typescript'
+let g:netrw_dirhist_2='/home/xuanhung/Dev/Struct-React-Typescript/src'
+let g:netrw_dirhist_1='/home/xuanhung/Dev/Struct-React-Typescript/src/constants'
+let g:netrw_dirhist_0='/home/xuanhung/Dev/Struct-React-Typescript/src'
+let g:netrw_dirhist_9='/home/xuanhung/Dev/Struct-React-Typescript'
+let g:netrw_dirhist_8='/home/xuanhung/Dev/store/toeic990'
+let g:netrw_dirhist_7='/home/xuanhung/Dev/Struct-React-Typescript/.vscode'
+let g:netrw_dirhist_6='/home/xuanhung/Dev/Struct-React-Typescript'
+let g:netrw_dirhist_5='/'

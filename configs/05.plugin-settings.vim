@@ -35,10 +35,11 @@ let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 
+autocmd VimEnter * NERDTree
 
 " fzf
 " let <C->
-map <leader>p :Files<CR>
+map <leader>p :GFiles<CR>
 let g:fzf_colors = { 
   \ 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
@@ -65,10 +66,16 @@ let g:Hexokinase_highlighters = ['virtual']
 let g:Hexokinase_virtualText = '▩'
 
 " coc.vim
+
+" Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gr <Plug>(coc-rename)
+nmap <silent> gR <Plug>(coc-references)
+nmap <silent> ge <Plug>(coc-diagnostic-prev)
+nmap <silent> gE <Plug>(coc-diagnostic-next)
+nmap <silent> ga :CocAction<cr>
+nmap gd <Plug>(coc-definition)
 " Use K to show documentation in preview window.
 
 "airline
@@ -82,3 +89,19 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 let g:enable_italic_font = 1
 let g:enable_bold_font = 1
+
+" easymotion
+map <Leader> <Plug>(easymotion-prefix)
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)

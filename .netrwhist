@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhistcnt =4
 let g:netrw_dirhist_4='/home/xuanhung/.config/nvim/configs'
 let g:netrw_dirhist_3='/home/xuanhung/Dev/Struct-React-Typescript'
@@ -10,3 +11,13 @@ let g:netrw_dirhist_8='/home/xuanhung/Dev/store/toeic990'
 let g:netrw_dirhist_7='/home/xuanhung/Dev/Struct-React-Typescript/.vscode'
 let g:netrw_dirhist_6='/home/xuanhung/Dev/Struct-React-Typescript'
 let g:netrw_dirhist_5='/'
+=======
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/nlcpu0049/Dev/Project/medusa_admin_frontend/src'
+let g:netrw_dirhist_6='/home/nlcpu0049/.config/gnome-session/saved-session'
+let g:netrw_dirhist_5='/home/nlcpu0049/.config/enchant'
+let g:netrw_dirhist_4='/home/nlcpu0049/.config/configstore'
+let g:netrw_dirhist_3='/home/nlcpu0049/.config/coc'
+let g:netrw_dirhist_2='/home/nlcpu0049/.config'
+let g:netrw_dirhist_1='/home/nlcpu0049'
+>>>>>>> test

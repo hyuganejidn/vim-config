@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 scriptencoding utf-8
 
 if exists('g:no_vim_fancy_text') || !has('conceal') || &enc != 'utf-8'
@@ -7,6 +8,11 @@ endif
 syntax match div "//" conceal cchar=÷
 syntax match mul "*" conceal cchar=×
 syntax match eq "===" conceal cchar=≣
+=======
+syntax match div "//" conceal cchar=÷
+syntax match mul "*" conceal cchar=×
+syntax match eq "==" conceal cchar=≣
+>>>>>>> test
 syntax match neq "!=" conceal cchar=≠
 syntax match gteq ">=" conceal cchar=≥
 syntax match lteq "<=" conceal cchar=≤
@@ -21,8 +27,11 @@ syntax match parse1 "|=" conceal cchar=⊧
 syntax match parse2 "|." conceal cchar=⊦
 syntax match neq "/=" conceal cchar=≠
 
+<<<<<<< HEAD
 "hi! link rsFancyOperator Operator
 "hi! link Conceal Operator
 
+=======
+>>>>>>> test
 setlocal conceallevel=1
 

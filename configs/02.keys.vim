@@ -7,8 +7,13 @@ map <C-h> <C-W>h
 " Resize and split window
 nnoremap <leader>= :vertical resize +5<CR>
 nnoremap <leader>- :vertical resize -5<CR>
-map ss :split<Return><C-w>w
-map sv :vsplit<Return><C-w>w
+map sv :split<Return><C-w>w
+map ss :vsplit<Return><C-w>w
+
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>  
+
 " nnoremap <leader>v <C-w>v<C-w>l
 "nnoremap <leader>e :edit <C-R>=fnameescape(expand('%:h')).'/'<cr>
 "nnoremap <leader>x :split <C-R>=fnameescape(expand('%:h')).'/'<cr>

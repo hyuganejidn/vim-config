@@ -1,3 +1,20 @@
+
+" PYTHON PROVIDERS {{{
+
+if has('macunix')
+  " OSX
+  let g:python3_host_prog = '/usr/local/bin/python3' "---------- Set python 3 provider
+  let g:python_host_prog = '/usr/local/bin/python2' "-------------- Set python 2 provider
+elseif has('unix')
+  " Ubuntu
+  let g:python3_host_prog = '/usr/bin/python3' "---------- Set python 3 provider
+  let g:python_host_prog = '/usr/bin/python' "-------------- Set python 2 provider
+elseif has('win32') || has('win64')
+  " Window
+endif
+
+" }}}
+
 let mapleader=" "
 
 set nocompatible "Forget compatibility with Vi. Who cares.
@@ -8,11 +25,13 @@ syntax enable
 
 set cc=+1
 set encoding=UTF-8
+"set fileencoding=utf-8
+
 " Cursor
 set mouse=a
 set cursorline
 set ruler "Display current cursor position in lower right corner.
-
+set cmdheight=2                         " More space for displaying messages
 set ttimeoutlen=50
 set timeoutlen=1000
 
@@ -23,6 +42,7 @@ set go-=T "Hide MacVim toolbar by default
 
 set mousehide "Hide mouse when typing
 
+autocmd VimEnter * wincmd p
 
 " File 
 filetype plugin on
@@ -34,6 +54,8 @@ set nobackup "_____________________________________________---- Dont save backup
 set nowb
 set noswapfile
 let g:jsx_ext_required = 1 "_________________________ Dont detect js file as jsx
+set formatoptions-=cro                  " Stop newline continution of comments
+set sessionoptions+=globals
 
 set backupdir=~/Tem,/tmp
 set backupcopy=yes
@@ -51,13 +73,14 @@ set scrolloff=5
 set si "smart indent
 set cindent
 set expandtab
+set backspace=indent,eol,start
 "Indent stuff
 set smarttab
 set autoindent
 
 
 set clipboard+=unnamedplus
-set pumheight=15
+set pumheight=10
 set conceallevel=0
 
 set incsearch
@@ -67,13 +90,14 @@ set wildmenu
 set nu
 set rnu
 
-" set guifont=Hack\ Nerd\ Font
+set guifont=Hack\ Nerd\ Font
+
+"set guifont=Hack\ Nerd\ Font
 " set guifont=Fira\ Code\ Retina
 set splitbelow
 set splitright
 
-autocmd BufEnter * :set scroll=15
-
+autocmd BufEnter * :set scroll=10
 "Always show the status line
 set laststatus=2
 
@@ -98,14 +122,24 @@ set signcolumn=yes
 set cmdheight=1 
 set pumheight=15 "______________________________--- limit autocomple candidates
 set hidden "_________________________ if hidden is not set, TextEdit might fail.
-set updatetime=300 "____________ smaller updatetime for CursorHold & CursorHoldI
+set updatetime=100 "____________ smaller updatetime for CursorHold & CursorHoldI
 
 " Folding
 set foldenable
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
-set foldlevel=2
+set foldlevel=1
+augroup folding_vim
+  autocmd!
+  autocmd FileType vim        setlocal foldmethod=marker
+  autocmd FileType snippets   setlocal foldmethod=marker
+augroup END
+
+" Undo
+set undolevels=100 "------------------------------- Default is 1000 -> Too large
+set undoreload=1000 "----------------------------- Default is 10000 -> Too large
+set undodir=~/.config/nvim/undodir "--------------- Default folder for undo step
 
 " INTERFACE {{{
 

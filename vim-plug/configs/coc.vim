@@ -8,7 +8,10 @@ if match(&rtp, 'coc.nvim') >= 0
     let s:languages = [
         \ 'coc-html',
         \ 'coc-css',
+        \ 'coc-clangd',
         \ 'coc-tsserver',
+        \ 'coc-flutter',
+        \ 'coc-sql',
         \ 'coc-docker',
         \ 'coc-java',
         \ 'coc-json',
@@ -30,6 +33,7 @@ if match(&rtp, 'coc.nvim') >= 0
         \ 'coc-stylelintplus',
         \ 'coc-eslint',
         \ 'coc-diagnostic',
+        \ 'coc-stylelintplus',
         \ ]
 
     let s:utils = [

@@ -10,9 +10,9 @@ nnoremap <leader>- :vertical resize -5<CR>
 map sv :split<Return><C-w>w
 map ss :vsplit<Return><C-w>w
 
-map gn :bn<cr>
-map gp :bp<cr>
-map gd :bd<cr>  
+map bn :bn<cr>
+map bp :bp<cr>
+map bd :bd<cr>
 
 " nnoremap <leader>v <C-w>v<C-w>l
 "nnoremap <leader>e :edit <C-R>=fnameescape(expand('%:h')).'/'<cr>

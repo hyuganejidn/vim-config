@@ -6,7 +6,7 @@
 " Tagbar 
 nmap <F8> :TagbarToggle<CR>
 
-"lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear

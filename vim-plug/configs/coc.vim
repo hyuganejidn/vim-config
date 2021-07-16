@@ -8,8 +8,9 @@ if match(&rtp, 'coc.nvim') >= 0
     let s:languages = [
         \ 'coc-html',
         \ 'coc-css',
-        \ 'coc-clangd',
+        "\ 'coc-clangd',
         \ 'coc-tsserver',
+        "\ 'coc-ccls',
         \ 'coc-flutter',
         \ 'coc-sql',
         \ 'coc-docker',

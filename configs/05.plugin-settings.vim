@@ -19,4 +19,9 @@ augroup language_react
     autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 augroup END
 
-" }}}
+augroup autosave
+  autocmd!
+  autocmd FocusLost * :wa
+  autocmd BufLeave * update
+  autocmd InsertLeave * update
+augroup END

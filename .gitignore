@@ -1,3 +1,12 @@
-/bundle
-/autoload/plugged
-/test
+bundle/
+test/
+tags*
+.netrwhist
+pythonpath.vim
+nodepath.vim
+autoload/plugged/*
+vimspector-config/*
+paths.vim
+session
+wiki/
+pack/

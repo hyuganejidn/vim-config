@@ -3,12 +3,12 @@
 
 if has('macunix')
   " OSX
-  let g:python3_host_prog = '/usr/local/bin/python3' "---------- Set python 3 provider
-  let g:python_host_prog = '/usr/local/bin/python2' "-------------- Set python 2 provider
+  let g:python3_host_prog = '/usr/local/bin/python3' " ---------- Set python 3 provider
+  let g:python_host_prog = '/usr/local/bin/python2' " -------------- Set python 2 provider
 elseif has('unix')
   " Ubuntu
-  let g:python3_host_prog = '/usr/bin/python3' "---------- Set python 3 provider
-  let g:python_host_prog = '/usr/bin/python' "-------------- Set python 2 provider
+  let g:python3_host_prog = '/usr/bin/python3' " ---------- Set python 3 provider
+  let g:python_host_prog = '/usr/bin/python' " -------------- Set python 2 provider
 elseif has('win32') || has('win64')
   " Window
 endif
@@ -25,7 +25,7 @@ syntax enable
 
 set cc=+1
 set encoding=UTF-8
-"set fileencoding=utf-8
+set fileencoding=utf-8
 
 " Cursor
 set mouse=a
@@ -69,7 +69,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=0
 set showtabline=2
-set scrolloff=5
+"set scrolloff=5
 set si "smart indent
 set cindent
 set expandtab
@@ -90,7 +90,7 @@ set wildmenu
 set nu
 set rnu
 
-set guifont=Hack\ Nerd\ Font
+"set guifont=Hack\ Nerd\ Font
 
 "set guifont=Hack\ Nerd\ Font
 " set guifont=Fira\ Code\ Retina
@@ -111,6 +111,7 @@ set formatoptions=qrn1
 
 " colorscheme
 set termguicolors
+set t_Co=256
 colorscheme dracula
 highlight Comment cterm=italic gui=italic
 highlight NonText guifg=#4A4A59
@@ -141,8 +142,9 @@ set undolevels=100 "------------------------------- Default is 1000 -> Too large
 set undoreload=1000 "----------------------------- Default is 10000 -> Too large
 set undodir=~/.config/nvim/undodir "--------------- Default folder for undo step
 
-" INTERFACE {{{
 
+
+" INTERFACE {{{
 :set guioptions-=m "___________________________________________ Remove menu bar
 :set guioptions-=T "____________________________________________ Remove toolbar
 :set guioptions-=r "______________________________ Remove right-hand scroll bar
